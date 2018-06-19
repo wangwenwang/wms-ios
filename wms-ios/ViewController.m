@@ -43,14 +43,6 @@
     NSString *htmlString = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     NSURL *url = [[NSURL alloc] initWithString:filePath];
     [self.webView loadHTMLString:htmlString baseURL:url];
-    
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        sleep(2);
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-            //            [self playSoundName:@"wrong01.wav"];
-        });
-    });
 }
 
 
@@ -87,10 +79,14 @@
 // 跳到扫码控制器
 - (void)skipScan {
     
-    ScanCodeViewController *vc = [[ScanCodeViewController alloc] init];
-    vc.webView = self.webView;
-    [self presentViewController:vc animated:YES completion:nil];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        ScanCodeViewController *vc = [[ScanCodeViewController alloc] init];
+        vc.webView = self.webView;
+        [self presentViewController:vc animated:YES completion:nil];
+    });
 }
+
 
 - (void)scanQRCode {
     
