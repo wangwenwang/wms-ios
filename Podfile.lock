@@ -1,0 +1,24 @@
+PODS:
+  - MBProgressHUD (1.0.0)
+  - SGQRCode (2.2.0)
+  - SSZipArchive (2.1.2)
+
+DEPENDENCIES:
+  - MBProgressHUD (~> 1.0.0)
+  - SGQRCode
+  - SSZipArchive
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MBProgressHUD
+    - SGQRCode
+    - SSZipArchive
+
+SPEC CHECKSUMS:
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  SGQRCode: 6cd7f03ea6b74d1267820d427b07d1451b387c79
+  SSZipArchive: d4009d2ce5520a421f231fd97028cc0e2667eed8
+
+PODFILE CHECKSUM: a871c6dd3c3c00832b7a42e3b575d28ca2a21b32
+
+COCOAPODS: 1.5.3

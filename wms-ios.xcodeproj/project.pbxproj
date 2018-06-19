@@ -1,0 +1,656 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		083B5535475EC0DD62B5A387 /* libPods-wms-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8AEAEDB0F05D64CF7D8DE34 /* libPods-wms-ios.a */; };
+		3B7A2D6E20D94C3A000CA7EC /* wrong01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3BA1E31D20D92FA200FEC447 /* wrong01.mp3 */; };
+		3B7A2D6F20D94C3A000CA7EC /* wrong01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3BA1E31E20D92FA200FEC447 /* wrong01.wav */; };
+		3B7A2D7420D94F28000CA7EC /* dist.zip in Resources */ = {isa = PBXBuildFile; fileRef = 3B7A2D7220D94ED5000CA7EC /* dist.zip */; };
+		3B7A2D7820D956F2000CA7EC /* ScanCodeViewController.m in Resources */ = {isa = PBXBuildFile; fileRef = 3BA1E31920D92F8E00FEC447 /* ScanCodeViewController.m */; };
+		3B7A2D7920D95730000CA7EC /* ViewController.m in Resources */ = {isa = PBXBuildFile; fileRef = 3BA1E2EA20D92A8900FEC447 /* ViewController.m */; };
+		3B7A2D7A20D95733000CA7EC /* AppDelegate.m in Resources */ = {isa = PBXBuildFile; fileRef = 3BA1E2E720D92A8900FEC447 /* AppDelegate.m */; };
+		3BA1E2E820D92A8900FEC447 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA1E2E720D92A8900FEC447 /* AppDelegate.m */; };
+		3BA1E2EB20D92A8900FEC447 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA1E2EA20D92A8900FEC447 /* ViewController.m */; };
+		3BA1E2EE20D92A8900FEC447 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BA1E2EC20D92A8900FEC447 /* Main.storyboard */; };
+		3BA1E2F020D92A8900FEC447 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BA1E2EF20D92A8900FEC447 /* Assets.xcassets */; };
+		3BA1E2F320D92A8900FEC447 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BA1E2F120D92A8900FEC447 /* LaunchScreen.storyboard */; };
+		3BA1E2F620D92A8900FEC447 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA1E2F520D92A8900FEC447 /* main.m */; };
+		3BA1E30020D92A8900FEC447 /* wms_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA1E2FF20D92A8900FEC447 /* wms_iosTests.m */; };
+		3BA1E30B20D92A8900FEC447 /* wms_iosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA1E30A20D92A8900FEC447 /* wms_iosUITests.m */; };
+		3BA1E31B20D92F8E00FEC447 /* ScanCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA1E31920D92F8E00FEC447 /* ScanCodeViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3BA1E2FC20D92A8900FEC447 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BA1E2DB20D92A8900FEC447 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BA1E2E220D92A8900FEC447;
+			remoteInfo = "wms-ios";
+		};
+		3BA1E30720D92A8900FEC447 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BA1E2DB20D92A8900FEC447 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BA1E2E220D92A8900FEC447;
+			remoteInfo = "wms-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3B7A2D7220D94ED5000CA7EC /* dist.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = dist.zip; sourceTree = "<group>"; };
+		3BA1E2E320D92A8900FEC447 /* wms-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wms-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BA1E2E620D92A8900FEC447 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3BA1E2E720D92A8900FEC447 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3BA1E2E920D92A8900FEC447 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3BA1E2EA20D92A8900FEC447 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3BA1E2ED20D92A8900FEC447 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3BA1E2EF20D92A8900FEC447 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BA1E2F220D92A8900FEC447 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3BA1E2F420D92A8900FEC447 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BA1E2F520D92A8900FEC447 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3BA1E2FB20D92A8900FEC447 /* wms-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "wms-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BA1E2FF20D92A8900FEC447 /* wms_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wms_iosTests.m; sourceTree = "<group>"; };
+		3BA1E30120D92A8900FEC447 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BA1E30620D92A8900FEC447 /* wms-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "wms-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BA1E30A20D92A8900FEC447 /* wms_iosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wms_iosUITests.m; sourceTree = "<group>"; };
+		3BA1E30C20D92A8900FEC447 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BA1E31920D92F8E00FEC447 /* ScanCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanCodeViewController.m; sourceTree = "<group>"; };
+		3BA1E31A20D92F8E00FEC447 /* ScanCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanCodeViewController.h; sourceTree = "<group>"; };
+		3BA1E31D20D92FA200FEC447 /* wrong01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrong01.mp3; sourceTree = "<group>"; };
+		3BA1E31E20D92FA200FEC447 /* wrong01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wrong01.wav; sourceTree = "<group>"; };
+		3BA1E31F20D932AD00FEC447 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		632888AA56CDE19691F185D1 /* Pods-wms-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wms-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-wms-ios/Pods-wms-ios.release.xcconfig"; sourceTree = "<group>"; };
+		66E6BE9B5A35A1CBA148688C /* Pods-wms-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wms-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wms-ios/Pods-wms-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		E8AEAEDB0F05D64CF7D8DE34 /* libPods-wms-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wms-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3BA1E2E020D92A8900FEC447 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				083B5535475EC0DD62B5A387 /* libPods-wms-ios.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BA1E2F820D92A8900FEC447 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BA1E30320D92A8900FEC447 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3BA1E2DA20D92A8900FEC447 = {
+			isa = PBXGroup;
+			children = (
+				3BA1E2E520D92A8900FEC447 /* wms-ios */,
+				3BA1E2FE20D92A8900FEC447 /* wms-iosTests */,
+				3BA1E30920D92A8900FEC447 /* wms-iosUITests */,
+				3BA1E2E420D92A8900FEC447 /* Products */,
+				BFDF093011221E6D1494A864 /* Pods */,
+				96EEE59EE1D476AE28FDA223 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3BA1E2E420D92A8900FEC447 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BA1E2E320D92A8900FEC447 /* wms-ios.app */,
+				3BA1E2FB20D92A8900FEC447 /* wms-iosTests.xctest */,
+				3BA1E30620D92A8900FEC447 /* wms-iosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BA1E2E520D92A8900FEC447 /* wms-ios */ = {
+			isa = PBXGroup;
+			children = (
+				3B7A2D7220D94ED5000CA7EC /* dist.zip */,
+				3BA1E31C20D92FA200FEC447 /* audio */,
+				3BA1E2E620D92A8900FEC447 /* AppDelegate.h */,
+				3BA1E2E720D92A8900FEC447 /* AppDelegate.m */,
+				3BA1E2E920D92A8900FEC447 /* ViewController.h */,
+				3BA1E2EA20D92A8900FEC447 /* ViewController.m */,
+				3BA1E31A20D92F8E00FEC447 /* ScanCodeViewController.h */,
+				3BA1E31920D92F8E00FEC447 /* ScanCodeViewController.m */,
+				3BA1E2EC20D92A8900FEC447 /* Main.storyboard */,
+				3BA1E2EF20D92A8900FEC447 /* Assets.xcassets */,
+				3BA1E2F120D92A8900FEC447 /* LaunchScreen.storyboard */,
+				3BA1E2F420D92A8900FEC447 /* Info.plist */,
+				3BA1E2F520D92A8900FEC447 /* main.m */,
+			);
+			path = "wms-ios";
+			sourceTree = "<group>";
+		};
+		3BA1E2FE20D92A8900FEC447 /* wms-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				3BA1E2FF20D92A8900FEC447 /* wms_iosTests.m */,
+				3BA1E30120D92A8900FEC447 /* Info.plist */,
+			);
+			path = "wms-iosTests";
+			sourceTree = "<group>";
+		};
+		3BA1E30920D92A8900FEC447 /* wms-iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3BA1E30A20D92A8900FEC447 /* wms_iosUITests.m */,
+				3BA1E30C20D92A8900FEC447 /* Info.plist */,
+			);
+			path = "wms-iosUITests";
+			sourceTree = "<group>";
+		};
+		3BA1E31C20D92FA200FEC447 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				3BA1E31D20D92FA200FEC447 /* wrong01.mp3 */,
+				3BA1E31E20D92FA200FEC447 /* wrong01.wav */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
+		96EEE59EE1D476AE28FDA223 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BA1E31F20D932AD00FEC447 /* libz.tbd */,
+				E8AEAEDB0F05D64CF7D8DE34 /* libPods-wms-ios.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFDF093011221E6D1494A864 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66E6BE9B5A35A1CBA148688C /* Pods-wms-ios.debug.xcconfig */,
+				632888AA56CDE19691F185D1 /* Pods-wms-ios.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3BA1E2E220D92A8900FEC447 /* wms-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BA1E30F20D92A8900FEC447 /* Build configuration list for PBXNativeTarget "wms-ios" */;
+			buildPhases = (
+				894D65C68D5186CBEFF260DF /* [CP] Check Pods Manifest.lock */,
+				3BA1E2DF20D92A8900FEC447 /* Sources */,
+				3BA1E2E020D92A8900FEC447 /* Frameworks */,
+				3BA1E2E120D92A8900FEC447 /* Resources */,
+				7326161C1DC337879975748E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "wms-ios";
+			productName = "wms-ios";
+			productReference = 3BA1E2E320D92A8900FEC447 /* wms-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3BA1E2FA20D92A8900FEC447 /* wms-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BA1E31220D92A8900FEC447 /* Build configuration list for PBXNativeTarget "wms-iosTests" */;
+			buildPhases = (
+				3BA1E2F720D92A8900FEC447 /* Sources */,
+				3BA1E2F820D92A8900FEC447 /* Frameworks */,
+				3BA1E2F920D92A8900FEC447 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BA1E2FD20D92A8900FEC447 /* PBXTargetDependency */,
+			);
+			name = "wms-iosTests";
+			productName = "wms-iosTests";
+			productReference = 3BA1E2FB20D92A8900FEC447 /* wms-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3BA1E30520D92A8900FEC447 /* wms-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BA1E31520D92A8900FEC447 /* Build configuration list for PBXNativeTarget "wms-iosUITests" */;
+			buildPhases = (
+				3BA1E30220D92A8900FEC447 /* Sources */,
+				3BA1E30320D92A8900FEC447 /* Frameworks */,
+				3BA1E30420D92A8900FEC447 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BA1E30820D92A8900FEC447 /* PBXTargetDependency */,
+			);
+			name = "wms-iosUITests";
+			productName = "wms-iosUITests";
+			productReference = 3BA1E30620D92A8900FEC447 /* wms-iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3BA1E2DB20D92A8900FEC447 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "wenwang wang";
+				TargetAttributes = {
+					3BA1E2E220D92A8900FEC447 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					3BA1E2FA20D92A8900FEC447 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3BA1E2E220D92A8900FEC447;
+					};
+					3BA1E30520D92A8900FEC447 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3BA1E2E220D92A8900FEC447;
+					};
+				};
+			};
+			buildConfigurationList = 3BA1E2DE20D92A8900FEC447 /* Build configuration list for PBXProject "wms-ios" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3BA1E2DA20D92A8900FEC447;
+			productRefGroup = 3BA1E2E420D92A8900FEC447 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3BA1E2E220D92A8900FEC447 /* wms-ios */,
+				3BA1E2FA20D92A8900FEC447 /* wms-iosTests */,
+				3BA1E30520D92A8900FEC447 /* wms-iosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3BA1E2E120D92A8900FEC447 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B7A2D7A20D95733000CA7EC /* AppDelegate.m in Resources */,
+				3B7A2D7920D95730000CA7EC /* ViewController.m in Resources */,
+				3B7A2D7420D94F28000CA7EC /* dist.zip in Resources */,
+				3B7A2D6E20D94C3A000CA7EC /* wrong01.mp3 in Resources */,
+				3B7A2D6F20D94C3A000CA7EC /* wrong01.wav in Resources */,
+				3BA1E2F320D92A8900FEC447 /* LaunchScreen.storyboard in Resources */,
+				3B7A2D7820D956F2000CA7EC /* ScanCodeViewController.m in Resources */,
+				3BA1E2F020D92A8900FEC447 /* Assets.xcassets in Resources */,
+				3BA1E2EE20D92A8900FEC447 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BA1E2F920D92A8900FEC447 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BA1E30420D92A8900FEC447 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7326161C1DC337879975748E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-wms-ios/Pods-wms-ios-resources.sh",
+				"${PODS_ROOT}/SGQRCode/SGQRCode/SGQRCode.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SGQRCode.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wms-ios/Pods-wms-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		894D65C68D5186CBEFF260DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-wms-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3BA1E2DF20D92A8900FEC447 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BA1E2EB20D92A8900FEC447 /* ViewController.m in Sources */,
+				3BA1E2F620D92A8900FEC447 /* main.m in Sources */,
+				3BA1E31B20D92F8E00FEC447 /* ScanCodeViewController.m in Sources */,
+				3BA1E2E820D92A8900FEC447 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BA1E2F720D92A8900FEC447 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BA1E30020D92A8900FEC447 /* wms_iosTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BA1E30220D92A8900FEC447 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BA1E30B20D92A8900FEC447 /* wms_iosUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3BA1E2FD20D92A8900FEC447 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BA1E2E220D92A8900FEC447 /* wms-ios */;
+			targetProxy = 3BA1E2FC20D92A8900FEC447 /* PBXContainerItemProxy */;
+		};
+		3BA1E30820D92A8900FEC447 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BA1E2E220D92A8900FEC447 /* wms-ios */;
+			targetProxy = 3BA1E30720D92A8900FEC447 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3BA1E2EC20D92A8900FEC447 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BA1E2ED20D92A8900FEC447 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3BA1E2F120D92A8900FEC447 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BA1E2F220D92A8900FEC447 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3BA1E30D20D92A8900FEC447 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3BA1E30E20D92A8900FEC447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3BA1E31020D92A8900FEC447 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66E6BE9B5A35A1CBA148688C /* Pods-wms-ios.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AP5995A5FC;
+				INFOPLIST_FILE = "wms-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "fds.wms-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BA1E31120D92A8900FEC447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 632888AA56CDE19691F185D1 /* Pods-wms-ios.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AP5995A5FC;
+				INFOPLIST_FILE = "wms-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "fds.wms-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3BA1E31320D92A8900FEC447 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "wms-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "fds.wms-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wms-ios.app/wms-ios";
+			};
+			name = Debug;
+		};
+		3BA1E31420D92A8900FEC447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "wms-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "fds.wms-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wms-ios.app/wms-ios";
+			};
+			name = Release;
+		};
+		3BA1E31620D92A8900FEC447 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "wms-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "fds.wms-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "wms-ios";
+			};
+			name = Debug;
+		};
+		3BA1E31720D92A8900FEC447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "wms-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "fds.wms-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "wms-ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3BA1E2DE20D92A8900FEC447 /* Build configuration list for PBXProject "wms-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BA1E30D20D92A8900FEC447 /* Debug */,
+				3BA1E30E20D92A8900FEC447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BA1E30F20D92A8900FEC447 /* Build configuration list for PBXNativeTarget "wms-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BA1E31020D92A8900FEC447 /* Debug */,
+				3BA1E31120D92A8900FEC447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BA1E31220D92A8900FEC447 /* Build configuration list for PBXNativeTarget "wms-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BA1E31320D92A8900FEC447 /* Debug */,
+				3BA1E31420D92A8900FEC447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BA1E31520D92A8900FEC447 /* Build configuration list for PBXNativeTarget "wms-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BA1E31620D92A8900FEC447 /* Debug */,
+				3BA1E31720D92A8900FEC447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3BA1E2DB20D92A8900FEC447 /* Project object */;
+}
