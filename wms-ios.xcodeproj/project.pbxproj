@@ -535,7 +535,7 @@
 				INFOPLIST_FILE = "wms-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "fds.wms-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaidongyuan.wms;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -551,7 +551,7 @@
 				INFOPLIST_FILE = "wms-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "fds.wms-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaidongyuan.wms;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
