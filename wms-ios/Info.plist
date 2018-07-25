@@ -48,5 +48,20 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLIconFile</key>
+			<string></string>
+			<key>CFBundleURLName</key>
+			<string>wechatauthdemo</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>wxf1af3db4c541e417</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>

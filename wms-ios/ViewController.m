@@ -11,11 +11,10 @@
 #import <JavaScriptCore/JavaScriptCore.h>
 #import "ScanCodeViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import <WXApi.h>
 
 @interface ViewController ()
 
-
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end
 
@@ -43,6 +42,15 @@
     NSString *htmlString = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     NSURL *url = [[NSURL alloc] initWithString:filePath];
     [self.webView loadHTMLString:htmlString baseURL:url];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:kReceive_WebView_Notification object:nil userInfo:@{@"webView":_webView}];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addBtn:) name:@"fds" object:nil];
+    
+    
+    NSString *jsStr = [NSString stringWithFormat:@"QRScanAjax('%@', '%@', '%@', '%@',)" ,@"1" ,@"2" ,@"3" ,@"4"];
+    NSLog(@"%@",jsStr);
+    [_webView stringByEvaluatingJavaScriptFromString:jsStr];
+    return;
 }
 
 
@@ -62,12 +70,20 @@
             qrscanDes = jsVal.toString;
             break;
         }
-        if([qrscanDes isEqualToString:@"我想调用app原生扫描二维码/条码"]) {
+        if([qrscanDes isEqualToString:@"调用app原生扫描二维码/条码"]) {
             
             [self scanQRCode];
-        }else if([qrscanDes isEqualToString:@"我想播放警告音"]) {
+        }else if([qrscanDes isEqualToString:@"播放警告音"]) {
             
             [self playSoundName:@"wrong01.wav"];
+        }else if([qrscanDes isEqualToString:@"微信登录"]) {
+            
+            SendAuthReq* req = [[SendAuthReq alloc] init];
+            req.scope = @"snsapi_userinfo";
+            req.state = @"wechat_sdk_wms";
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [WXApi sendReq:req];
+            });
         }
         NSLog(@"%@",qrscanDes);
     };
@@ -116,7 +132,7 @@
         } else if (status == AVAuthorizationStatusDenied) {
             
             // 用户拒绝当前应用访问相机
-            UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"请去-> [设置 - 隐私 - 相机 - 雪花(订单)] 打开访问开关" preferredStyle:(UIAlertControllerStyleAlert)];
+            UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"请去-> [设置 - 隐私 - 相机 - wms] 打开访问开关" preferredStyle:(UIAlertControllerStyleAlert)];
             UIAlertAction *alertA = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
                 
             }];

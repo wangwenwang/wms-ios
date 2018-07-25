@@ -5,4 +5,6 @@ target 'wms-ios' do
 pod 'SSZipArchive'
 pod 'SGQRCode'
 pod 'MBProgressHUD', '~> 1.0.0'
+pod 'WechatOpenSDK'
+pod 'AFNetworking', '~> 3.0'
 end

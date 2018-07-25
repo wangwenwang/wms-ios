@@ -1,0 +1,17 @@
+//
+//  wms-ios-Prefix.pch
+//  wms-ios
+//
+//  Created by wenwang wang on 2018/7/19.
+//  Copyright © 2018年 wenwang wang. All rights reserved.
+//
+
+#ifndef wms_ios_Prefix_pch
+#define wms_ios_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* wms_ios_Prefix_pch */
+
+#define kReceive_WebView_Notification @"Receive_WebView_Notification"
