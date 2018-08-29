@@ -10,6 +10,7 @@
 		083B5535475EC0DD62B5A387 /* libPods-wms-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8AEAEDB0F05D64CF7D8DE34 /* libPods-wms-ios.a */; };
 		3B7A2D6E20D94C3A000CA7EC /* wrong01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3BA1E31D20D92FA200FEC447 /* wrong01.mp3 */; };
 		3B7A2D6F20D94C3A000CA7EC /* wrong01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3BA1E31E20D92FA200FEC447 /* wrong01.wav */; };
+		3B912F182136B26100A2478A /* dist.zip in Resources */ = {isa = PBXBuildFile; fileRef = 3B912F172136B25500A2478A /* dist.zip */; };
 		3BA1E2E820D92A8900FEC447 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA1E2E720D92A8900FEC447 /* AppDelegate.m */; };
 		3BA1E2EB20D92A8900FEC447 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA1E2EA20D92A8900FEC447 /* ViewController.m */; };
 		3BA1E2EE20D92A8900FEC447 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BA1E2EC20D92A8900FEC447 /* Main.storyboard */; };
@@ -23,7 +24,6 @@
 		3BA8DC3B21018EEA003A00D9 /* NSString+toDict.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8DC3921018EE9003A00D9 /* NSString+toDict.m */; };
 		3BA8DC482101A062003A00D9 /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8DC462101A061003A00D9 /* NSDictionary+Extension.m */; };
 		3BA8DC492101A062003A00D9 /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8DC472101A062003A00D9 /* NSArray+Extension.m */; };
-		3BE45AD421300B87008AC950 /* dist.zip in Resources */ = {isa = PBXBuildFile; fileRef = 3BE45AD221300AC0008AC950 /* dist.zip */; };
 		3BE45AD6213238E0008AC950 /* Default-568@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BE45AD5213238D1008AC950 /* Default-568@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B912F172136B25500A2478A /* dist.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = dist.zip; sourceTree = "<group>"; };
 		3BA1E2E320D92A8900FEC447 /* wms-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wms-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA1E2E620D92A8900FEC447 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3BA1E2E720D92A8900FEC447 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -75,7 +76,6 @@
 		3BA8DC452101A061003A00D9 /* NSDictionary+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extension.h"; sourceTree = "<group>"; };
 		3BA8DC462101A061003A00D9 /* NSDictionary+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Extension.m"; sourceTree = "<group>"; };
 		3BA8DC472101A062003A00D9 /* NSArray+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extension.m"; sourceTree = "<group>"; };
-		3BE45AD221300AC0008AC950 /* dist.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = dist.zip; sourceTree = "<group>"; };
 		3BE45AD5213238D1008AC950 /* Default-568@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568@2x.png"; sourceTree = "<group>"; };
 		632888AA56CDE19691F185D1 /* Pods-wms-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wms-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-wms-ios/Pods-wms-ios.release.xcconfig"; sourceTree = "<group>"; };
 		66E6BE9B5A35A1CBA148688C /* Pods-wms-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wms-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wms-ios/Pods-wms-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,8 +133,8 @@
 		3BA1E2E520D92A8900FEC447 /* wms-ios */ = {
 			isa = PBXGroup;
 			children = (
+				3B912F172136B25500A2478A /* dist.zip */,
 				3BE45AD5213238D1008AC950 /* Default-568@2x.png */,
-				3BE45AD221300AC0008AC950 /* dist.zip */,
 				3BA8DC28210081C9003A00D9 /* Category */,
 				3BA1E31C20D92FA200FEC447 /* audio */,
 				3BA1E2E620D92A8900FEC447 /* AppDelegate.h */,
@@ -321,8 +321,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B912F182136B26100A2478A /* dist.zip in Resources */,
 				3BE45AD6213238E0008AC950 /* Default-568@2x.png in Resources */,
-				3BE45AD421300B87008AC950 /* dist.zip in Resources */,
 				3B7A2D6E20D94C3A000CA7EC /* wrong01.mp3 in Resources */,
 				3B7A2D6F20D94C3A000CA7EC /* wrong01.wav in Resources */,
 				3BA1E2F320D92A8900FEC447 /* LaunchScreen.storyboard in Resources */,

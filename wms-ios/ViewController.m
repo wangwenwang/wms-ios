@@ -47,6 +47,28 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addBtn:) name:@"fds" object:nil];
     
     
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"weixin://"]]) {
+        
+        //微信
+        NSLog(@"YESWX");
+    }else {
+        
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            
+            for (int i = 0; i < 20; i++) {
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    NSString *jsStr = [NSString stringWithFormat:@"WXInstall_Check_Ajax('%@')", @"NO"];
+                    NSLog(@"%@",jsStr);
+                    [_webView stringByEvaluatingJavaScriptFromString:jsStr];
+                });
+                usleep(100000);
+            }
+        });
+    }
+    
+    
     NSString *jsStr = [NSString stringWithFormat:@"QRScanAjax('%@', '%@', '%@', '%@',)" ,@"1" ,@"2" ,@"3" ,@"4"];
     NSLog(@"%@",jsStr);
     [_webView stringByEvaluatingJavaScriptFromString:jsStr];
