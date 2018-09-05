@@ -25,6 +25,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    
     [WXApi registerApp:@"wxf1af3db4c541e417"];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveWebView:) name:kReceive_WebView_Notification object:nil];
     return YES;
@@ -118,13 +119,13 @@
 // 获取wms用户信息
 - (void)RFWeixinLogin:(NSString *)openid {
     
-    openid = @"o13ss00CRgONcueMcdllF4taidso";
+//    openid = @"o13ss00CRgONcueMcdllF4taidso";
     NSString *WarehouseCode = @"";
     NSString *UserID = @"";
     
     NSString *params = [NSString stringWithFormat:@"{\"OpenId\":\"%@\"}", openid];
     NSString *paramsEncoding = [params stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSString *url = [NSString stringWithFormat:@"http://119.23.153.97:8888/wms/RFWeixinLogin.do?WarehouseCode=%@&UserID=%@&params=%@", WarehouseCode, UserID, paramsEncoding];
+    NSString *url = [NSString stringWithFormat:@"https://scm.cy-scm.com/wms/RFWeixinLogin.do?WarehouseCode=%@&UserID=%@&params=%@", WarehouseCode, UserID, paramsEncoding];
     NSLog(@"请求wms用户信息参数：%@",url);
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager.requestSerializer setValue:@"cyscm" forHTTPHeaderField:@"AuthCode"];
@@ -198,3 +199,13 @@
 }
 
 @end
+
+
+
+//@implementation NSURLRequest(ViewController)
+//+ (BOOL)allowsAnyHTTPSCertificateForHost:(NSString *)host {
+//
+//    return YES;
+//}
+//@end
+

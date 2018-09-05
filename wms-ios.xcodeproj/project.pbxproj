@@ -10,7 +10,7 @@
 		083B5535475EC0DD62B5A387 /* libPods-wms-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8AEAEDB0F05D64CF7D8DE34 /* libPods-wms-ios.a */; };
 		3B7A2D6E20D94C3A000CA7EC /* wrong01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3BA1E31D20D92FA200FEC447 /* wrong01.mp3 */; };
 		3B7A2D6F20D94C3A000CA7EC /* wrong01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3BA1E31E20D92FA200FEC447 /* wrong01.wav */; };
-		3B912F182136B26100A2478A /* dist.zip in Resources */ = {isa = PBXBuildFile; fileRef = 3B912F172136B25500A2478A /* dist.zip */; };
+		3B912F29213CF4DA00A2478A /* RichURLSessionProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B912F28213CF4DA00A2478A /* RichURLSessionProtocol.m */; };
 		3BA1E2E820D92A8900FEC447 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA1E2E720D92A8900FEC447 /* AppDelegate.m */; };
 		3BA1E2EB20D92A8900FEC447 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA1E2EA20D92A8900FEC447 /* ViewController.m */; };
 		3BA1E2EE20D92A8900FEC447 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BA1E2EC20D92A8900FEC447 /* Main.storyboard */; };
@@ -20,6 +20,7 @@
 		3BA1E30020D92A8900FEC447 /* wms_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA1E2FF20D92A8900FEC447 /* wms_iosTests.m */; };
 		3BA1E30B20D92A8900FEC447 /* wms_iosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA1E30A20D92A8900FEC447 /* wms_iosUITests.m */; };
 		3BA1E31B20D92F8E00FEC447 /* ScanCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA1E31920D92F8E00FEC447 /* ScanCodeViewController.m */; };
+		3BA6566D213FB50F00A36CC4 /* dist.zip in Resources */ = {isa = PBXBuildFile; fileRef = 3BA6566C213FB50B00A36CC4 /* dist.zip */; };
 		3BA8DC3821018268003A00D9 /* NSDictionary+toString.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8DC3721018268003A00D9 /* NSDictionary+toString.m */; };
 		3BA8DC3B21018EEA003A00D9 /* NSString+toDict.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8DC3921018EE9003A00D9 /* NSString+toDict.m */; };
 		3BA8DC482101A062003A00D9 /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8DC462101A061003A00D9 /* NSDictionary+Extension.m */; };
@@ -45,7 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3B912F172136B25500A2478A /* dist.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = dist.zip; sourceTree = "<group>"; };
+		3B912F27213CF4DA00A2478A /* RichURLSessionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RichURLSessionProtocol.h; sourceTree = "<group>"; };
+		3B912F28213CF4DA00A2478A /* RichURLSessionProtocol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RichURLSessionProtocol.m; sourceTree = "<group>"; };
 		3BA1E2E320D92A8900FEC447 /* wms-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wms-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA1E2E620D92A8900FEC447 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3BA1E2E720D92A8900FEC447 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		3BA1E31D20D92FA200FEC447 /* wrong01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrong01.mp3; sourceTree = "<group>"; };
 		3BA1E31E20D92FA200FEC447 /* wrong01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wrong01.wav; sourceTree = "<group>"; };
 		3BA1E31F20D932AD00FEC447 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		3BA6566C213FB50B00A36CC4 /* dist.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = dist.zip; sourceTree = "<group>"; };
 		3BA8DC2D21009E2A003A00D9 /* wms-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "wms-ios-Prefix.pch"; sourceTree = "<group>"; };
 		3BA8DC3621018268003A00D9 /* NSDictionary+toString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+toString.h"; sourceTree = "<group>"; };
 		3BA8DC3721018268003A00D9 /* NSDictionary+toString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+toString.m"; sourceTree = "<group>"; };
@@ -133,7 +136,7 @@
 		3BA1E2E520D92A8900FEC447 /* wms-ios */ = {
 			isa = PBXGroup;
 			children = (
-				3B912F172136B25500A2478A /* dist.zip */,
+				3BA6566C213FB50B00A36CC4 /* dist.zip */,
 				3BE45AD5213238D1008AC950 /* Default-568@2x.png */,
 				3BA8DC28210081C9003A00D9 /* Category */,
 				3BA1E31C20D92FA200FEC447 /* audio */,
@@ -143,6 +146,8 @@
 				3BA1E2EA20D92A8900FEC447 /* ViewController.m */,
 				3BA1E31A20D92F8E00FEC447 /* ScanCodeViewController.h */,
 				3BA1E31920D92F8E00FEC447 /* ScanCodeViewController.m */,
+				3B912F27213CF4DA00A2478A /* RichURLSessionProtocol.h */,
+				3B912F28213CF4DA00A2478A /* RichURLSessionProtocol.m */,
 				3BA1E2EC20D92A8900FEC447 /* Main.storyboard */,
 				3BA1E2EF20D92A8900FEC447 /* Assets.xcassets */,
 				3BA1E2F120D92A8900FEC447 /* LaunchScreen.storyboard */,
@@ -321,7 +326,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B912F182136B26100A2478A /* dist.zip in Resources */,
+				3BA6566D213FB50F00A36CC4 /* dist.zip in Resources */,
 				3BE45AD6213238E0008AC950 /* Default-568@2x.png in Resources */,
 				3B7A2D6E20D94C3A000CA7EC /* wrong01.mp3 in Resources */,
 				3B7A2D6F20D94C3A000CA7EC /* wrong01.wav in Resources */,
@@ -394,6 +399,7 @@
 				3BA1E2EB20D92A8900FEC447 /* ViewController.m in Sources */,
 				3BA8DC3821018268003A00D9 /* NSDictionary+toString.m in Sources */,
 				3BA8DC482101A062003A00D9 /* NSDictionary+Extension.m in Sources */,
+				3B912F29213CF4DA00A2478A /* RichURLSessionProtocol.m in Sources */,
 				3BA8DC492101A062003A00D9 /* NSArray+Extension.m in Sources */,
 				3BA1E2F620D92A8900FEC447 /* main.m in Sources */,
 				3BA1E31B20D92F8E00FEC447 /* ScanCodeViewController.m in Sources */,

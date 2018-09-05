@@ -12,10 +12,14 @@
 #import "ScanCodeViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import <WXApi.h>
+#import "RichURLSessionProtocol.h"
 
-@interface ViewController ()
-
-
+@interface ViewController () {
+    
+    NSURLConnection *_urlConnection;
+    NSURLRequest *_request;
+    BOOL _authenticated;
+}
 @end
 
 @implementation ViewController
@@ -23,6 +27,9 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+    [NSURLProtocol registerClass:[RichURLSessionProtocol class]];
+    
     
     NSString *zipPath = [[NSBundle mainBundle] pathForResource:@"dist" ofType:@"zip"];
     NSLog(@"zipPath:%@", zipPath);
@@ -35,24 +42,26 @@
     // Unzip
     [SSZipArchive unzipFileAtPath:zipPath toDestination:unzipPath];
     
-    NSString *htmlPath = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];
-    NSLog(@"htmlPath:%@", htmlPath);
-    
+    // 加载URL
     NSString *filePath = [NSString stringWithFormat:@"%@/dist/%@", unzipPath, @"index.html"];
-    NSString *htmlString = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     NSURL *url = [[NSURL alloc] initWithString:filePath];
-    [self.webView loadHTMLString:htmlString baseURL:url];
+    [_webView loadRequest:[NSURLRequest requestWithURL:url]];
+    _request = [NSURLRequest requestWithURL:url];
     
+    //    NSString *htmlString = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+    //    [self.webView loadHTMLString:htmlString baseURL:url];
+    
+    _webView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     [[NSNotificationCenter defaultCenter] postNotificationName:kReceive_WebView_Notification object:nil userInfo:@{@"webView":_webView}];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addBtn:) name:@"fds" object:nil];
     
     
-    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"weixin://"]]) {
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"weixin://"]] || [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"Whatapp://"]] || [WXApi isWXAppInstalled]) {
         
         //微信
         NSLog(@"YESWX");
     }else {
         
+        // 移除微信按钮
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             
             for (int i = 0; i < 20; i++) {
@@ -67,6 +76,23 @@
             }
         });
     }
+    
+    // 显示版本号
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        
+        for (int i = 0; i < 20; i++) {
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+                NSString *app_Version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+                NSString *jsStrVersion = [NSString stringWithFormat:@"VersionShow('版本:%@')", app_Version];
+                NSLog(@"%@",jsStrVersion);
+                [_webView stringByEvaluatingJavaScriptFromString:jsStrVersion];
+            });
+            usleep(100000);
+        }
+    });
     
     
     NSString *jsStr = [NSString stringWithFormat:@"QRScanAjax('%@', '%@', '%@', '%@',)" ,@"1" ,@"2" ,@"3" ,@"4"];
@@ -106,6 +132,27 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 [WXApi sendReq:req];
             });
+        }
+        // 第一次加载登录页，不执行此函数，所以还写了一个定时器
+        else if([qrscanDes isEqualToString:@"登录页面已加载"]) {
+            
+            if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"weixin://"]] || [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"Whatapp://"]] || [WXApi isWXAppInstalled]) {
+                
+                //微信
+                NSLog(@"YESWX");
+            }else {
+                
+                // 移除微信按钮
+                NSString *jsStr = [NSString stringWithFormat:@"WXInstall_Check_Ajax('%@')", @"NO"];
+                NSLog(@"%@",jsStr);
+                [_webView stringByEvaluatingJavaScriptFromString:jsStr];
+            }
+            
+            NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+            NSString *app_Version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+            NSString *jsStrVersion = [NSString stringWithFormat:@"VersionShow('版本:%@')", app_Version];
+            NSLog(@"%@",jsStrVersion);
+            [_webView stringByEvaluatingJavaScriptFromString:jsStrVersion];
         }
         NSLog(@"%@",qrscanDes);
     };
@@ -191,5 +238,119 @@ void LMsoundCompleteCallback(SystemSoundID soundID, void *clientData){
     
 }
 
+
+
+
+
+
+
+
+// NSURLConnection适配
+- (void)connection:(NSURLConnection *)connection willSendRequestForAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
+{
+    if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust])
+    {
+        NSURLCredential *credential = [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust];
+        [[challenge sender] useCredential:credential forAuthenticationChallenge:challenge];
+    }
+    else
+    {
+        if ([challenge previousFailureCount] == 0)
+        {
+            [[challenge sender] continueWithoutCredentialForAuthenticationChallenge:challenge];
+        }
+        else
+        {
+            [[challenge sender] continueWithoutCredentialForAuthenticationChallenge:challenge];
+        }
+    }
+}
+
+#pragma mark - NSURLSessionDelegate代理方法 HTTPS ---开始---
+- (void)URLSession:(NSURLSession *)session didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential *))completionHandler
+{
+    NSURLSessionAuthChallengeDisposition disposition = NSURLSessionAuthChallengePerformDefaultHandling;
+    __block NSURLCredential *credential = nil;
+    // 判断服务器返回的证书是否是服务器信任的
+    if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust])
+    {
+        credential = [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust];
+        if (credential)
+        {
+            disposition = NSURLSessionAuthChallengeUseCredential; // 使用证书
+        }
+        else
+        {
+            disposition = NSURLSessionAuthChallengePerformDefaultHandling; // 忽略证书 默认的做法
+        }
+    }
+    else
+    {
+        disposition = NSURLSessionAuthChallengeCancelAuthenticationChallenge; // 取消请求,忽略证书
+    }
+    if (completionHandler)// 安装证书
+    {
+        completionHandler(disposition, credential);
+    }
+}
+
+
+#pragma mark - Webview delegate
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType;
+{
+    NSLog(@"Did start loading: %@ auth:%d", [[request URL] absoluteString], _authenticated);
+    _authenticated = NO;
+    
+    // 这里在 首次加载本地request H5的时候 将不能正常请求的https  做一个证书信任方面的处理  拿https://39.108.172.22下的任意一个接口处理下信任问题即可
+    _request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://scm.cy-scm.com/wms/RFLogin.do"]];
+    _urlConnection = [[NSURLConnection alloc] initWithRequest:_request delegate:self];
+    [_urlConnection start];
+    
+    // 这里做一个  特有化处理  因为第一次加载的H5 是本地资源路径  如果是  url资源，可以注释掉
+    if ([[[request URL] absoluteString] containsString:@"dist/index.html"])
+    {
+        return YES;
+    }
+    
+    if (!_authenticated)
+    {
+        _authenticated = NO;
+        _urlConnection = [[NSURLConnection alloc] initWithRequest:_request delegate:self];
+        [_urlConnection start];
+        return NO;
+    }
+    return YES;
+}
+
+#pragma mark - NURLConnection delegate
+- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge;
+{
+    NSLog(@"WebController Got auth challange via NSURLConnection");
+    if ([challenge previousFailureCount] == 0)
+    {
+        _authenticated = YES;
+        NSURLCredential *credential = [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust];
+        [challenge.sender useCredential:credential forAuthenticationChallenge:challenge];
+    } else
+    {
+        [[challenge sender] cancelAuthenticationChallenge:challenge];
+    }
+}
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response;
+{
+    NSLog(@"WebController received response via NSURLConnection");
+    
+    // remake a webview call now that authentication has passed ok.
+    _authenticated = YES;
+    //    [_webView loadRequest:_request];  //  如果加载的是url 而不是本地资源路径  那么注释放开即可
+    
+    // Cancel the URL connection otherwise we double up (webview + url connection, same url = no good!)
+    [_urlConnection cancel];
+}
+
+- (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace
+{
+    return [protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust];
+}
 
 @end
