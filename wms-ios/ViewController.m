@@ -13,6 +13,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <WXApi.h>
 #import "RichURLSessionProtocol.h"
+#import "RegisterViewController.h"
 
 @interface ViewController () {
     
@@ -20,6 +21,8 @@
     NSURLRequest *_request;
     BOOL _authenticated;
 }
+
+@property (weak, nonatomic) IBOutlet UIButton *registerBtn;
 @end
 
 @implementation ViewController
@@ -27,6 +30,9 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+    [_registerBtn setBackgroundColor:[UIColor colorWithRed:47/255.0 green:95/255.0 blue:199/255.0 alpha:1.0]];
+    [_registerBtn.layer setCornerRadius:5.0f];
     
     [NSURLProtocol registerClass:[RichURLSessionProtocol class]];
     
@@ -106,6 +112,14 @@
     
     [super didReceiveMemoryWarning];
 }
+
+- (IBAction)registerOnclick:(UIButton *)sender {
+    
+    RegisterViewController *vc = [[RegisterViewController alloc] init];
+//    vc
+}
+
+
 
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{

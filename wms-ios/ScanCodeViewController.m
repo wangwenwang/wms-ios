@@ -105,7 +105,7 @@
 
 - (void)setupQRCodeScanning {
     self.manager = [SGQRCodeScanManager sharedManager];
-    NSArray *arr = @[AVMetadataObjectTypeQRCode, AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code];
+    NSArray *arr = @[AVMetadataObjectTypeQRCode, AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code, AVMetadataObjectTypeCode39Code];
     // AVCaptureSessionPreset1920x1080 推荐使用，对于小型的二维码读取率较高
     [_manager setupSessionPreset:AVCaptureSessionPreset1920x1080 metadataObjectTypes:arr currentController:self];
     //    [manager cancelSampleBufferDelegate];
@@ -164,8 +164,9 @@
     if(!_backBtn) {
         
         _backBtn = [[UIButton alloc] init];
-        [_backBtn setFrame:CGRectMake(30, 60, 20, 20)];
+        [_backBtn setFrame:CGRectMake(30, 60, 40, 40)];
         [_backBtn setImage:[UIImage imageNamed:@"btn_dismiss"] forState:UIControlStateNormal];
+        _backBtn.imageView.contentMode = UIViewContentModeScaleAspectFit;
         [_backBtn addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
     }
     return _backBtn;

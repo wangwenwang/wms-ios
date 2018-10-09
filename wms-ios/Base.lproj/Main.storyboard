@@ -28,16 +28,38 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="4K0-ev-fqP"/>
                                 </connections>
                             </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlH-TI-pMJ">
+                                <rect key="frame" x="28" y="320" width="319" height="40"/>
+                                <color key="backgroundColor" red="0.27058823529999998" green="0.38431372549999998" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Vxc-uC-47I"/>
+                                </constraints>
+                                <state key="normal" title="注册">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerOnclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6BV-bZ-eTm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="tlH-TI-pMJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="28" id="4Ne-H0-Qdv"/>
+                            <constraint firstItem="tlH-TI-pMJ" firstAttribute="top" secondItem="Dis-ne-QMr" secondAttribute="bottom" constant="300" id="5R3-0Z-wwn"/>
                             <constraint firstAttribute="trailing" secondItem="jic-TB-QCc" secondAttribute="trailing" id="8T4-HG-Ai5"/>
-                            <constraint firstItem="jic-TB-QCc" firstAttribute="top" secondItem="Dis-ne-QMr" secondAttribute="bottom" id="VCR-e3-4N9"/>
+                            <constraint firstAttribute="trailing" secondItem="tlH-TI-pMJ" secondAttribute="trailing" constant="28" id="ExZ-kB-YzD"/>
+                            <constraint firstItem="717-zx-va5" firstAttribute="top" secondItem="jic-TB-QCc" secondAttribute="bottom" id="gSA-Ql-p6s"/>
+                            <constraint firstItem="jic-TB-QCc" firstAttribute="top" secondItem="Dis-ne-QMr" secondAttribute="bottom" id="gtS-CR-ltk"/>
                             <constraint firstItem="jic-TB-QCc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iH8-rt-e39"/>
-                            <constraint firstItem="717-zx-va5" firstAttribute="top" secondItem="jic-TB-QCc" secondAttribute="bottom" id="pjz-4t-JNc"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="tlH-TI-pMJ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="registerBtn" destination="tlH-TI-pMJ" id="xD7-ut-0B8"/>
                         <outlet property="webView" destination="jic-TB-QCc" id="t8z-EU-TuQ"/>
                     </connections>
                 </viewController>

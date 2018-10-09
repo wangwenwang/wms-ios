@@ -146,7 +146,7 @@
                 NSString *jsStr = [NSString stringWithFormat:@"WXBind_NO_Ajax('%@')",openid];
                 NSLog(@"%@",jsStr);
                 [_webView stringByEvaluatingJavaScriptFromString:jsStr];
-                NSLog(@"些微信未注册");
+                NSLog(@"微信未注册");
             }else if([data isKindOfClass:[NSArray class]]) {
                 
 //                NSDictionary *dataDict = data[0];
